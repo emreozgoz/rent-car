@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace RentCarServer.Infrastructure.Services
 {
-    internal sealed class UserContex(HttpContextAccessor httpContextAccessor) : IUserContext
+    internal sealed class UserContex(IHttpContextAccessor httpContextAccessor) : IUserContext
     {
         public Guid GetUserId()
         {
